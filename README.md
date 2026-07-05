@@ -1,39 +1,37 @@
 # Analisis-Embudo-Y-Retencion-MercadoLibre
 Análisis para MercadoLibre enfocado en entender en que etapa del proceso de compra se pierden los usuarios y cómo mejorar su retención.
 
-Datos: Datasets divididos en hojas en Google Sheets nombradas;
+Datos: Dos tablas con columnas que incluyen información sobre los compradores, sus dispositivos utilizados, registro de actividad, país entre otros datos divididas de la siguiente manera;
 
-raw_ventas → Tabla transaccional que incluye todos los datos de cada venta (tienda, dept, fecha, ventas_semanales, esferiado).
+mercadolibre_funnel → Registra los eventos de los usuarios durante el proceso de compra (user_id, session_id, event_name, event_times, country, device_category, platform, product_cat, price, currency, referral_source, event_date, year).
 
-raw_departamento → Tabla de Lookup con datos sobre el número y nombre de los departamentos en tienda(dept, nombre_dept)
-
-raw_tiendas → Tabla de Lookup con datos de la superficie en m2 para medir su eficiencia en ventas por área (tienda, tipo, tamaño)
+mercadolibre_retention → Mide la actividad recurrente por usuario y periodo (user_id, signup_date, signup_datetime, country, device_category, platform, day_after_signup, activity_date, active, prob_active)
 
 📂 Contenido del repositorio
 
-Diego-Sarinana/Resumen-Ejecutivo-Ventas-Walmart - Se hizo una exploración, limpieza y análisis en un proceso dividido en las siguientes etapas: 
-1. Carga y exploración
-2. Identificación de problemas de calidad de datos
-3. Limpieza de Datos
-4. Enriquecimiento
-5. Resumen con tablas dinámicas
-6. Creación de dashboards
-7. Redacción de Resumen ejecutivo
-8. Quality Assurance
+Diego-Sarinana/Analisis-Embudo-Y-Retencion-MercadoLibre - Se hizo un mapeo del embudo de conversión usando SQL llevando a cabo el siguiente proceso: 
+1. Carga y exploración de esquema y datos base
+2. Construcción del embudo de conversión
+3. Análisis de retención y cohortes
+4. Redacción de Resumen ejecutivo
+
 
 ▶ Cómo abrir el archivo en Google Sheets/Excel
 
 1. Descarga el archivo dando clic al botón de 'Download raw file' tras haber abierto la sección del proyecto (Diego-Sarinana/Resumen-Ejecutivo-Ventas-Walmart)
-2. En la herramienta de su elección (Excel/Sheets) abra el archivo
+2. En la herramienta de tu elección (Excel/Sheets) abra el archivo
 
 O: Abre el siguiente enlace;
-https://docs.google.com/spreadsheets/d/1lzuPmp0t6xrTFiqUgGP8_RuPS-JhaTNecG47ScUxGUY/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1te4De0QvxfNt20P3EwFDVfv6Tlh4OsLuODCQkebbqD8/edit?usp=sharing
   
 📘 Cómo reproducir el análisis:
 1. Tras abrir el archivo en la herramienta elegida puedes dar clic en las hojas de la barra inferior para revisar las modificaciones y resultados obtenidos
    
 🧠 Objetivo del análisis:
-1. Ayudar a la dirección comercial a identificar qué departamentos son más eficientes. 
-2. Detectar qué departamentos aportan más al negocio. 
-3. Identificar los departamentos de los que no se saca el máximo provecho en ventas.
+1. Identificar los principales puntos de fuga. 
+2. Evaluar la retención de usuarios por cohortes. 
+3. Identificar en qué paso se observa la mayor caída porcentual de usuarios y cómo varía esa pérdida por país.
 4. Saber hacia qué departamentos enfocar el presupuesto y dónde ajustar el inventario.
+
+🗣️Recomendación de negocio:
+Tomando en cuenta la etapa de select_item a add_to_cart y el fallo grave que presenta por tener la mayor caída entre ellas, se recomienda revisar la presentación de los productos así como los precios y costos de envío para evitar ése desinterés que afecta la empresa.
