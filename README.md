@@ -34,4 +34,4 @@ https://docs.google.com/spreadsheets/d/1te4De0QvxfNt20P3EwFDVfv6Tlh4OsLuODCQkebb
 4. Saber hacia qué departamentos enfocar el presupuesto y dónde ajustar el inventario.
 
 🗣️Recomendación de negocio:
-Tomando en cuenta la etapa de select_item a add_to_cart y el fallo grave que presenta por tener la mayor caída entre ellas, se recomienda revisar la presentación de los productos así como los precios y costos de envío para evitar ése desinterés que afecta la empresa.
+- Tomando en cuenta la etapa de select_item a add_to_cart y el fallo grave que presenta por tener la mayor caída entre ellas, se recomienda revisar la presentación de los productos así como los precios y costos de envío para evitar ése desinterés que afecta la empresa.
